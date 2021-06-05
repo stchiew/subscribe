@@ -2,30 +2,10 @@
 
 ## Summary
 
-Short summary on functionality and used technologies.
+Web part for adding an email to a mailing list.
 
 [picture of the solution in action, if possible]
 
-## Used SharePoint Framework Version
-
-![version](https://img.shields.io/npm/v/@microsoft/sp-component-base/latest?color=green)
-
-## Applies to
-
-- [SharePoint Framework](https://aka.ms/spfx)
-- [Microsoft 365 tenant](https://docs.microsoft.com/en-us/sharepoint/dev/spfx/set-up-your-developer-tenant)
-
-> Get your own free development tenant by subscribing to [Microsoft 365 developer program](http://aka.ms/o365devprogram)
-
-## Prerequisites
-
-> Any special pre-requisites?
-
-## Solution
-
-Solution|Author(s)
---------|---------
-folder name | Author details (name, company, twitter alias with link)
 
 ## Version history
 
@@ -34,35 +14,27 @@ Version|Date|Comments
 1.1|March 10, 2021|Update comment
 1.0|January 29, 2021|Initial release
 
-## Disclaimer
+## Used SharePoint Framework Version
 
-**THIS CODE IS PROVIDED *AS IS* WITHOUT WARRANTY OF ANY KIND, EITHER EXPRESS OR IMPLIED, INCLUDING ANY IMPLIED WARRANTIES OF FITNESS FOR A PARTICULAR PURPOSE, MERCHANTABILITY, OR NON-INFRINGEMENT.**
+![version](https://img.shields.io/npm/v/@microsoft/sp-component-base/latest?color=green)
 
----
+## Prerequisites
 
-## Minimal Path to Awesome
-
-- Clone this repository
-- Ensure that you are at the solution folder
-- in the command-line run:
-  - **npm install**
-  - **gulp serve**
-
-> Include any additional steps as needed.
+- Sharepoint list to store the emails - list with just a Title column
 
 ## Features
 
-Description of the extension that expands upon high-level summary above.
+This webpart illustrates the following concepts:
 
-This extension illustrates the following concepts:
+- React Functional components with hooks
+- Office Fluent UI
 
-- topic 1
-- topic 2
-- topic 3
 
-> Notice that better pictures and documentation will increase the sample usage and the value you are providing for others. Thanks for your submissions advance.
+### TODOs
 
-> Share your web part with others through Microsoft 365 Patterns and Practices program to get visibility and exposure. More details on the community, open-source projects and other activities from http://aka.ms/m365pnp.
+- Selectable list from property pane
+- theme variants
+- Responsive to sectional backgrounds
 
 ## References
 
