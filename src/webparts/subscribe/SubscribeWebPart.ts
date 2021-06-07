@@ -10,18 +10,27 @@ import { BaseClientSideWebPart } from '@microsoft/sp-webpart-base';
 import * as strings from 'SubscribeWebPartStrings';
 import { Subscribe } from './components/Subscribe';
 import { ISubscribeProps } from './components/ISubscribeProps';
+import SharePointDataService from './services/SharePointDataService';
+import IDataService from './services/IDataService';
 
 export interface ISubscribeWebPartProps {
-  description: string;
+  mailist: string;
 }
 
 export default class SubscribeWebPart extends BaseClientSideWebPart<ISubscribeWebPartProps> {
 
+  private _dataService: IDataService;
+
+  protected onInit(): Promise<void> {
+    this._dataService = new SharePointDataService();
+    return super.onInit();
+  }
   public render(): void {
     const element: React.ReactElement<ISubscribeProps> = React.createElement(
       Subscribe,
       {
-        description: this.properties.description,
+        dataService: this._dataService,
+        mailist: this.properties.mailist,
         current_user: this.context.pageContext.user.email
       }
     );
@@ -48,7 +57,7 @@ export default class SubscribeWebPart extends BaseClientSideWebPart<ISubscribeWe
             {
               groupName: strings.BasicGroupName,
               groupFields: [
-                PropertyPaneTextField('description', {
+                PropertyPaneTextField('mailist', {
                   label: strings.DescriptionFieldLabel
                 })
               ]

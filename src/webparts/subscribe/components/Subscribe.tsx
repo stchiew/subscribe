@@ -4,6 +4,7 @@ import { ISubscribeProps } from './ISubscribeProps';
 import { TextField } from 'office-ui-fabric-react/lib/TextField';
 import { Stack, IStackProps, IStackStyles } from 'office-ui-fabric-react/lib/Stack';
 import { PrimaryButton } from 'office-ui-fabric-react/lib/Button';
+import IDataService from '../services/IDataService';
 
 const stackTokens = { childrenGap: 50 };
 const iconProps = { iconName: 'Mail' };
@@ -16,6 +17,10 @@ const columnProps: Partial<IStackProps> = {
 
 export const Subscribe: React.FunctionComponent<ISubscribeProps> = (props: ISubscribeProps) => {
   const [txtValue, setTxtValue] = React.useState("");
+
+  const handleSubmit = (event) => {
+    IDataService.
+  }
   return (
     <div className={styles.subscribe}>
       <div className={styles.container}>

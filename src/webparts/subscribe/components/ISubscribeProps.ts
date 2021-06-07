@@ -1,4 +1,7 @@
+import IDataService from "../services/IDataService";
+
 export interface ISubscribeProps {
-  description: string;
+  dataService: IDataService;
+  mailist: string;
   current_user: string;
 }
